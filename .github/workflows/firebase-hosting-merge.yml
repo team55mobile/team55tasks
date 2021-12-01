@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
-      with:
+        with:
           channel: 'stable'
       # - run: npm ci && npm run build
       - run: flutter pub get
