@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "team55tasks",
     "public": "build/web",
     "ignore": [
       "firebase.json",
