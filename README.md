@@ -1,30 +1,41 @@
 # team55tasks
 
-A new Flutter project.
+Менеджер задач
 
-## Getting Started
+Вроде как задуман для авторизации в файрбейс и хранения данных там же, что из этого получится посмотрим позднее
 
-This project is a starting point for a Flutter application.
+---------------------------------------------
+## СБОРКА ПОД IOS
 
-A few resources to get you started if this is your first Flutter project:
+fastline для сборки и публикации
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+github actions для сборки из обдака
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---------------------------------------------
+## СБОРКА ПОД ANDROID
 
+fastline для сборки и публикации
 
-
+github actions для сборки из облака
 
 
 ---------------------------------------------
-Build web
-https://gist.github.com/rodydavis/bde9a9a8c2fcdcf3474c0f50248f2e3a
-https://gist.github.com/lukepighetti/dca8d731aa95adfa86fd01b0c76222d5
+## СБОРКА ПОД ВЕБ 
 
+У нас есть два варианта - собрать и опубликовать самим или оставить это на гитхаб экшены
+
+### первый вариант (complete)
 
 flutter build web
 
 firebase deploy --only hosting:team55tasks
+
+### второй вариант (complete)
+
+мучаем гисты и пользуемся мастером файрбейса для хостинга для генерации тасок
+
+https://gist.github.com/rodydavis/bde9a9a8c2fcdcf3474c0f50248f2e3a
+
+https://gist.github.com/lukepighetti/dca8d731aa95adfa86fd01b0c76222d5
+
+
