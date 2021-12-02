@@ -91,7 +91,7 @@ class _TaskAppState extends State<TaskApp> {
   }
 }
 
-class fireStore {
+class FireStore {
   //создать инстанс
 //FirebaseAuth auth = FirebaseAuth.instance;
 
