@@ -6,7 +6,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); //flutter fire example
+  WidgetsFlutterBinding.ensureInitialized(); //fire platform channels
 
   runApp(const TaskApp());
 }
