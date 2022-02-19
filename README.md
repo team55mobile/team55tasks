@@ -38,4 +38,4 @@ https://gist.github.com/rodydavis/bde9a9a8c2fcdcf3474c0f50248f2e3a
 
 https://gist.github.com/lukepighetti/dca8d731aa95adfa86fd01b0c76222d5
 
-
+https://team55tasks.web.app/#/ адрес страницы. Остальное в файрбейс конслоли
