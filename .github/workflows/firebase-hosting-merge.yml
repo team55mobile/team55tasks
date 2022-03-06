@@ -50,12 +50,12 @@ jobs:
       # - run: flutter analyze
       # - run: flutter test
       - run: flutter build apk --release
-      # push apk to build page (add tag stg_1.0.0)
+      # push apk to build page (add tag stg_1.0.0 git push --tags -f)
       - uses: ncipollo/release-action@v1
         with:
          artifacts: "build/app/outputs/flutter-apk/*.apk"
          #  token: $
-         token: ${{ secrets.GITHUB_TOKEN }}s
+         token: ${{ secrets.GITHUB_TOKEN }}
 
 # name: GitHub Actions Demo
 # on: [push]
