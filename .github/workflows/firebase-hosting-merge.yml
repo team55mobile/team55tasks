@@ -27,7 +27,7 @@ jobs:
           projectId: team55tasks
       # build ANDROID    
     
-  build android:  
+  build_android:  
     name: build for android
     runs-on: ubuntu-latest
     env:
