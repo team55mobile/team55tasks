@@ -69,11 +69,11 @@ jobs:
       # - run: flutter test
       - name: "🎉 Build reliase APK"
         run: flutter build apk --release
-          # env:
-          #   STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
-          #   KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-          #   KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          #   STORE_FILE: ${{ secrets.STORE_FILE }}
+          env:
+            STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+            KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+            KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+            STORE_FILE: ${{ secrets.STORE_FILE }}
       # push apk to build page (add tag stg_1.0.0 git push --tags -f)
       - name: "🎉 Upload to github reliases"
         uses: ncipollo/release-action@v1
@@ -84,14 +84,14 @@ jobs:
          token: ${{ secrets.GITHUB_TOKEN }}
       # Upload to Firebase Distribution
       #  https://developers.google.com/android/guides/client-auth
-      # - name: "🎉 Upload artifact to Firebase App Distribution com.team55mobile.team55tasks"
-      #   uses: wzieba/Firebase-Distribution-Github-Action@v1
-      #   with:
-      #     appId: ${{ secrets.FIREBASE_ANDROID_PROD_APP_ID }}
-      #     token: ${{ secrets.FIREBASE_TOKEN }}
-      #     groups: testers
-      #     file: build/app/outputs/apk/dev/debug/apk_name.apk
-      #     debug: true
+      - name: "🎉 Upload artifact to Firebase App Distribution com.team55mobile.team55tasks"
+        uses: wzieba/Firebase-Distribution-Github-Action@v1
+        with:
+          appId: ${{ secrets.FIREBASE_ANDROID_PROD_APP_ID }}
+          token: ${{ secrets.FIREBASE_TOKEN }}
+          groups: testers
+          file: build/app/outputs/apk/dev/debug/apk_name.apk
+          debug: true
 
 
 
