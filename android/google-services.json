@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "55443206356",
+    "firebase_url": "https://team55tasks-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "team55tasks",
+    "storage_bucket": "team55tasks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55443206356:android:7c047f24fd6e82f956cb41",
+        "android_client_info": {
+          "package_name": "com.team55mobile.tasks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55443206356-o3e02pd072pv2rpm9qmfmivguu373rgp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.team55mobile.tasks",
+            "certificate_hash": "1e50343ae724843c92fbd934dbb2dd570d1e56e2"
+          }
+        },
+        {
+          "client_id": "55443206356-grjfri56mnbnfbea7gsjqobp5iejgfpd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXea-Yu9BEJzPaWjcDLxUbcq5afXeXYy8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55443206356-grjfri56mnbnfbea7gsjqobp5iejgfpd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

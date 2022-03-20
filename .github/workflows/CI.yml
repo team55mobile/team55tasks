@@ -1,0 +1,55 @@
+name: CI analyze, test, and build
+on:
+  push:
+    branches:
+      - master
+    # do not trigger this
+    paths-ignore:
+      - "docs/**"
+      - "drz-swagger/**"
+      - ".vscode/**"
+  workflow_dispatch:
+jobs:
+  test_build:
+    name: test build
+    #ubuntu-latest, but you can also use windows-latest or macos-11. 
+    # https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions
+    # 1min macos = 2 windows = 10min ubuntu -> use ubuntu
+    runs-on: ubuntu-latest
+    env:
+      JAVA_VERSION: "12.x"
+      FLUTTER_VERSION: "2.10.3"
+    steps:
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '${{ env.JAVA_VERSION }}'
+      - name: "🎉 Checkout files"
+        uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          # flutter-version: '${{ env.FLUTTER_VERSION }}'
+      # - run: npm ci && npm run build
+      - run: flutter pub get
+      - run: flutter config --enable-web
+
+      # https://habr.com/ru/company/surfstudio/blog/520506/
+      # почитать тут как сделать падение анализатора только на уровне ошибок (не на уровне предупреждений)
+      # - run: sh ./scripts/flutter_analyze.sh
+      # OUTPUT="$(flutter analyze)"
+      # echo "$OUTPUT"
+      # echo
+      # if grep -q "error •" echo "$OUTPUT"; then
+      #     echo "flutter analyze found errors"
+      #     exit 1
+      # else
+      #     echo "flutter analyze didn't find any errors"
+      #     exit 0
+      # fi
+      - run: flutter analyze
+      - run: flutter test
+
+      - run: flutter build web
+
+      - name: "🎉 Build debug APK"
+        run: flutter build apk --debug

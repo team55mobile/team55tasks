@@ -1,4 +1,4 @@
-package com.example.team55tasks
+package com.team55mobile.tasks
 
 import io.flutter.embedding.android.FlutterActivity
 
