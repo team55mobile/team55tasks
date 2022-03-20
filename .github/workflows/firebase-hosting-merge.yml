@@ -69,11 +69,11 @@ jobs:
       # - run: flutter test
       - name: "🎉 Build reliase APK"
         run: flutter build apk --release
-          env:
-            STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
-            KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-            KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-            STORE_FILE: ${{ secrets.STORE_FILE }}
+        env:
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          STORE_FILE: ${{ secrets.STORE_FILE }}
       # push apk to build page (add tag stg_1.0.0 git push --tags -f)
       - name: "🎉 Upload to github reliases"
         uses: ncipollo/release-action@v1
